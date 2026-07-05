@@ -1,0 +1,10 @@
+{
+  "name": "mcp-ya-ho-slide-export",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "MCP 야호~! 학습자료 index.html의 각 섹션을 PNG로 캡처하고 하나의 PDF로 취합하는 도구",
+  "dependencies": {
+    "playwright": "1.47.0"
+  }
+}

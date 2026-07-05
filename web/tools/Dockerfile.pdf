@@ -1,0 +1,11 @@
+# PDF 캡처용 이미지 — Playwright 기본 이미지에는 한글(CJK)·컬러 이모지 폰트가 없어
+# 슬라이드의 한글/이모지가 깨진다(tofu). 폰트를 설치한 파생 이미지를 캐시해 사용한다.
+FROM mcr.microsoft.com/playwright:v1.47.0-jammy
+
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends \
+    fonts-noto-cjk \
+    fonts-noto-cjk-extra \
+    fonts-noto-color-emoji \
+    && rm -rf /var/lib/apt/lists/* \
+    && fc-cache -f

@@ -1,0 +1,8 @@
+# docker build
+.docker/
+
+# mac
+.DS_Store
+
+# node
+node_modules/
